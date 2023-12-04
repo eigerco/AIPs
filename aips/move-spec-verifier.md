@@ -35,9 +35,10 @@ Two notable things are out of scope for this AIP:
 ## Motivation
 
 The developers write formal specifications in Move, which can be incomplete. The specifications are constraints, such as a predicate `x > 0`, which doesn't specify a particular value for x but merely constrains it. There is a need for a way of checking if those constraints are complete and restricted specification in the most proper way.
+
 ## Impact
 
-As the proposed toolset verifies Move specifications, it will mainly impact the Move developers.
+As the proposed toolset verifies Move specifications, the target audience will be mainly the Move developers.
 
 Smart contract developers will be able to perform additional action - contract specification verification, allowing them to improve the quality of their contracts before deploying them on the network.
 
@@ -69,7 +70,7 @@ The `mutate` command is responsible for generating mutants from the Move source 
 7. Break/continue replacement or deletion - replaces or deletes break/continue statements with other break/continue statements.
 
 The `spec-verify` command is responsible for running the Move mutator tool and then checking if the generated mutants are valid according to the Move specifications. It will do the following:
-1. Takes command line arguments both for the Move Prover tool and for the Move mutator tool. It can also read the configuration from the JSON configuration file.
+1. Take command line arguments both for the Move Prover tool and for the Move mutator tool. It can also read the configuration from the JSON configuration file.
 2. Run the Move mutator tool (`mutate`) to generate mutants with the previously specified parameters.
 3. Run the Move Prover tool, passing the generated mutants individually.
 4. Collect the results and generate a report.
