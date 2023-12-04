@@ -34,8 +34,7 @@ Two notable things are out of scope for this AIP:
 
 ## Motivation
 
-The developers write formal specifications in Move, which can be incomplete. The specifications are constraints, such as a predicate `x > 0`, which doesn't specify a particular value for x but merely constrains it.
-
+The developers write formal specifications in Move, which can be incomplete. The specifications are constraints, such as a predicate `x > 0`, which doesn't specify a particular value for x but merely constrains it. There is a need for a way of checking if those constraints are complete and restricted specification in the most proper way.
 ## Impact
 
 As the proposed toolset verifies Move specifications, it will mainly impact the Move developers.
